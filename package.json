@@ -1,5 +1,5 @@
 {
-  "name": "redis-smq",
+  "name": "@caringdeveloper/redis-smq-fixed",
   "version": "2.0.11",
   "description": "A simple high-performance Redis message queue for Node.js.",
   "main": "index.js",
@@ -17,6 +17,7 @@
   },
   "devDependencies": {
     "bluebird": "3.7.1",
+    "cross-env": "^7.0.3",
     "eslint": "7.2.0",
     "eslint-config-prettier": "6.12.0",
     "eslint-plugin-prettier": "3.1.4",
@@ -26,7 +27,7 @@
     "typescript": "3.8.3"
   },
   "scripts": {
-    "test": "NODE_ENV=test jest --runInBand",
+    "test": "cross-env NODE_ENV=test jest --runInBand",
     "pretest": "npm run lint",
     "lint": "eslint --ignore-path .jshintignore src/*.js",
     "lint:fix": "eslint --ignore-path .jshintignore src/*.js --fix"
